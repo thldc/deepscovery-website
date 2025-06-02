@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -21,6 +21,39 @@
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
     />
     <style>
+      :root {
+        /* Cupigent Color Palette */
+        --blossom-pink: #FFB7C5;
+        --coral-peach: #FFA28C;
+        --lavender-mist: #D7C8FF;
+        --mint-whisper: #C9F2E7;
+        --deep-midnight: #1E1A28;
+        --neutral-100: #FFFFFF;
+        --neutral-200: #F8F9FA;
+        --neutral-300: #E9ECEF;
+        --neutral-400: #CED4DA;
+        --neutral-500: #ADB5BD;
+        --neutral-600: #6C757D;
+        
+        /* Typography */
+        --font-display: 'Poppins', 'Noto Sans KR', sans-serif;
+        --font-body: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+        
+        /* Spacing */
+        --space-xs: 4px;
+        --space-sm: 8px;
+        --space-md: 16px;
+        --space-lg: 24px;
+        --space-xl: 32px;
+        --space-2xl: 48px;
+        
+        /* Border Radius */
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --radius-xl: 24px;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -28,10 +61,10 @@
       }
 
       body {
-        font-family: "Noto Sans KR", sans-serif;
+        font-family: var(--font-body);
         line-height: 1.6;
-        color: #333;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: var(--deep-midnight);
+        background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
         min-height: 100vh;
       }
 
@@ -40,11 +73,12 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         z-index: 1000;
-        padding: 1rem 0;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        padding: var(--space-md) 0;
+        box-shadow: 0 2px 16px rgba(30, 26, 40, 0.08);
+        transition: all 0.3s ease;
       }
 
       .nav-container {
@@ -57,12 +91,14 @@
       }
 
       .nav-logo {
+        font-family: var(--font-display);
         font-size: 1.5rem;
-        font-weight: bold;
-        background: linear-gradient(45deg, #667eea, #764ba2);
+        font-weight: 700;
+        background: linear-gradient(90deg, var(--blossom-pink) 0%, var(--coral-peach) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        letter-spacing: -0.02em;
       }
 
       .nav-menu {
@@ -73,14 +109,17 @@
 
       .nav-item a {
         text-decoration: none;
-        color: #333;
+        color: var(--deep-midnight);
         font-weight: 500;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
         cursor: pointer;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-sm);
       }
 
       .nav-item a:hover {
-        color: #667eea;
+        color: var(--blossom-pink);
+        background: rgba(255, 183, 197, 0.1);
       }
 
       .mobile-menu-btn {
@@ -97,24 +136,25 @@
       }
 
       #language-select {
-        padding: 8px 15px;
-        border-radius: 25px;
-        border: 2px solid #667eea;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-xl);
+        border: 2px solid var(--lavender-mist);
         background: white;
-        color: #667eea;
+        color: var(--deep-midnight);
         font-weight: 500;
         cursor: pointer;
         transition: all 0.3s ease;
+        font-size: 0.9rem;
       }
 
       #language-select:hover {
-        background: #667eea;
-        color: white;
+        background: var(--lavender-mist);
+        border-color: var(--blossom-pink);
       }
 
       #language-select:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        box-shadow: 0 0 0 3px rgba(215, 200, 255, 0.3);
       }
 
       /* Main Content Styles */
@@ -125,52 +165,60 @@
       }
 
       .section {
-        margin-bottom: 50px;
-        padding: 40px;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: var(--space-2xl);
+        padding: var(--space-2xl);
+        background: var(--neutral-100);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 8px 24px rgba(30, 26, 40, 0.08);
+        border: 1px solid rgba(215, 200, 255, 0.1);
       }
 
       .section-title {
+        font-family: var(--font-display);
         font-size: 2.5rem;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 30px;
+        font-weight: 700;
+        color: var(--deep-midnight);
+        margin-bottom: var(--space-xl);
         text-align: center;
-        background: linear-gradient(45deg, #667eea, #764ba2);
+        background: linear-gradient(90deg, var(--blossom-pink) 0%, var(--coral-peach) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        letter-spacing: -0.03em;
       }
 
       .logo {
+        font-family: var(--font-display);
         font-size: 3rem;
-        font-weight: bold;
-        color: #667eea;
-        margin-bottom: 10px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
+        font-weight: 700;
+        color: var(--deep-midnight);
+        margin-bottom: var(--space-sm);
+        background: linear-gradient(90deg, var(--blossom-pink) 0%, var(--coral-peach) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        letter-spacing: -0.03em;
       }
 
       .tagline {
         font-size: 1.3rem;
-        color: #666;
-        margin-bottom: 20px;
+        color: var(--neutral-600);
+        margin-bottom: var(--space-lg);
+        font-weight: 400;
+        letter-spacing: -0.01em;
       }
 
       .status-badge {
         display: inline-block;
-        background: linear-gradient(45deg, #4caf50, #45a049);
-        color: white;
-        padding: 8px 20px;
-        border-radius: 25px;
+        background: linear-gradient(90deg, var(--mint-whisper) 0%, rgba(201, 242, 231, 0.6) 100%);
+        color: var(--deep-midnight);
+        padding: var(--space-sm) var(--space-lg);
+        border-radius: var(--radius-xl);
         font-size: 0.9rem;
-        font-weight: bold;
-        margin: 10px;
-        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        font-weight: 600;
+        margin: var(--space-sm);
+        box-shadow: 0 4px 12px rgba(201, 242, 231, 0.3);
+        border: 1px solid rgba(201, 242, 231, 0.5);
       }
 
       .cards-grid {
@@ -181,17 +229,18 @@
       }
 
       .card {
-        background: #f8f9fa;
-        border-radius: 15px;
-        padding: 30px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid rgba(102, 126, 234, 0.1);
+        background: var(--neutral-100);
+        border-radius: var(--radius-md);
+        padding: var(--space-xl);
+        box-shadow: 0 4px 16px rgba(30, 26, 40, 0.06);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(215, 200, 255, 0.1);
       }
 
       .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(30, 26, 40, 0.12);
+        border-color: var(--lavender-mist);
       }
 
       .card-title {
@@ -204,9 +253,9 @@
       }
 
       .card-icon {
-        margin-right: 10px;
+        margin-right: var(--space-sm);
         font-size: 1.8rem;
-        color: #667eea;
+        color: var(--blossom-pink);
       }
 
       .info-item {
@@ -222,25 +271,27 @@
       }
 
       .info-value {
-        color: #667eea;
+        color: var(--deep-midnight);
         font-weight: 600;
       }
 
       .download-btn {
         display: inline-block;
-        background: linear-gradient(45deg, #667eea, #764ba2);
+        background: linear-gradient(90deg, var(--blossom-pink) 0%, var(--coral-peach) 100%);
         color: white;
-        padding: 12px 25px;
-        border-radius: 25px;
+        padding: var(--space-md) var(--space-xl);
+        border-radius: var(--radius-xl);
         text-decoration: none;
-        font-weight: bold;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 16px rgba(255, 183, 197, 0.4);
+        font-size: 0.95rem;
       }
 
       .download-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 6px 20px rgba(255, 183, 197, 0.5);
+        background: linear-gradient(90deg, var(--coral-peach) 0%, var(--blossom-pink) 100%);
       }
 
       /* Business Plan Styles */
@@ -256,30 +307,33 @@
       }
 
       .gradient-text {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(90deg, var(--blossom-pink) 0%, var(--coral-peach) 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
       .feature-card {
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        background: #f8f9fa;
+        border-radius: var(--radius-sm);
+        padding: var(--space-lg);
+        margin-bottom: var(--space-lg);
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(30, 26, 40, 0.06);
+        background: var(--neutral-200);
+        border: 1px solid rgba(215, 200, 255, 0.1);
       }
 
       .feature-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(30, 26, 40, 0.1);
+        border-color: var(--lavender-mist);
       }
 
       .timeline-item {
-        padding-left: 30px;
-        border-left: 2px solid #667eea;
-        margin-left: 20px;
-        padding-bottom: 20px;
+        padding-left: var(--space-xl);
+        border-left: 2px solid var(--lavender-mist);
+        margin-left: var(--space-lg);
+        padding-bottom: var(--space-lg);
         position: relative;
       }
 
@@ -291,29 +345,30 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background: #667eea;
+        background: var(--blossom-pink);
+        box-shadow: 0 0 0 4px rgba(255, 183, 197, 0.2);
       }
 
       .gradient-bg {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, var(--blossom-pink) 0%, var(--coral-peach) 100%);
         color: white;
       }
 
       /* GTM Strategy Styles */
       .strategy-box {
-        background-color: #e6f7ff;
-        border-left: 5px solid #667eea;
-        padding: 1rem;
-        margin: 1.5rem 0;
-        border-radius: 0 8px 8px 0;
+        background: linear-gradient(90deg, rgba(215, 200, 255, 0.1) 0%, rgba(215, 200, 255, 0.05) 100%);
+        border-left: 4px solid var(--lavender-mist);
+        padding: var(--space-lg);
+        margin: var(--space-lg) 0;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       }
 
       .challenge-box {
-        background-color: #fff5f5;
-        border-left: 5px solid #e53e3e;
-        padding: 1rem;
-        margin: 1.5rem 0;
-        border-radius: 0 8px 8px 0;
+        background: linear-gradient(90deg, rgba(255, 162, 140, 0.1) 0%, rgba(255, 162, 140, 0.05) 100%);
+        border-left: 4px solid var(--coral-peach);
+        padding: var(--space-lg);
+        margin: var(--space-lg) 0;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       }
 
       .strategy-grid {
@@ -324,11 +379,17 @@
       }
 
       .strategy-card {
-        background-color: #f8f9fa;
-        border-radius: 8px;
-        padding: 1.5rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-top: 4px solid #667eea;
+        background: var(--neutral-100);
+        border-radius: var(--radius-sm);
+        padding: var(--space-lg);
+        box-shadow: 0 2px 8px rgba(30, 26, 40, 0.06);
+        border-top: 4px solid var(--blossom-pink);
+        transition: all 0.3s ease;
+      }
+      
+      .strategy-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(30, 26, 40, 0.1);
       }
 
       .comparison-table {
@@ -354,21 +415,21 @@
       }
 
       .key-point {
-        font-weight: 500;
-        color: #667eea;
+        font-weight: 600;
+        color: var(--blossom-pink);
       }
 
       .emphasis {
-        color: #e53e3e;
+        color: var(--coral-peach);
         font-weight: 600;
       }
 
       .quote {
-        border-left: 4px solid #667eea;
-        padding-left: 1rem;
+        border-left: 4px solid var(--lavender-mist);
+        padding-left: var(--space-lg);
         font-style: italic;
-        margin: 1.5rem 0;
-        color: #555;
+        margin: var(--space-lg) 0;
+        color: var(--neutral-600);
       }
 
       /* Footer Styles */
@@ -396,8 +457,8 @@
       }
 
       .contact-icon {
-        margin-right: 8px;
-        color: #667eea;
+        margin-right: var(--space-sm);
+        color: var(--blossom-pink);
       }
 
       /* Responsive Design */
@@ -629,10 +690,15 @@
         <div
           class="card"
           style="
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--blossom-pink) 0%, var(--coral-peach) 100%);
             color: white;
+            border: none;
+            position: relative;
+            overflow: hidden;
           "
         >
+          <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.1); border-radius: 50%;"></div>
+          <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(255, 255, 255, 0.08); border-radius: 50%;"></div>
           <h3
             style="margin-bottom: 15px; font-size: 1.3rem"
             data-i18n="next-steps.title"
@@ -1220,9 +1286,9 @@
           "nav.gtm-strategy": "GTM 전략",
           "nav.contact": "연락처",
           "company.name": "Deepscovery Inc.",
-          "company.tagline": "AI for Dating & Relationships",
-          "status.incorporated": "✅ 델라웨어 법인 설립 완료 (2025.06.02)",
-          "status.developing": "🚀 AGI Dating Agent 개발 중",
+          "company.tagline": "당신의 사랑을 응원하는 AI 친구",
+          "status.incorporated": "✨ 델라웨어 법인 설립 완료 (2025.06.02)",
+          "status.developing": "💝 AGI Dating Agent 열심히 준비 중",
           "card.company-info": "회사 정보",
           "card.executive-info": "경영진 정보",
           "card.service-vision": "서비스 비전",
@@ -1239,34 +1305,34 @@
           "value.company-type": "델라웨어 C-Corporation",
           "value.established": "2025년 6월 2일",
           "value.business-field": "AI 기반 데이팅 서비스",
-          "vision.title": "AGI for Dating Agent",
+          "vision.title": "Cupigent - 당신만을 위한 AI 데이팅 도우미",
           "vision.desc1":
-            "인공지능 기술을 활용하여 데이팅 경험을 혁신하는 것을 목표로 합니다.",
+            "더 이상 혼자서 고민하지 마세요! 저희가 당신의 완벽한 인연을 찾아드릴게요.",
           "vision.desc2":
-            "단순한 데이팅 앱이 아닌, 개인화된 AI 에이전트가 사용자의 취향과 성격을 분석하여 최적의 매칭을 제공합니다.",
-          "btn.view-plan": "사업계획서 보기",
-          "btn.download-pdf": "PDF 다운로드",
+            "Cupigent는 당신의 마음을 이해하고, 진정한 사랑을 찾을 수 있도록 정성껏 도와드리는 친근한 AI 친구예요.",
+          "btn.view-plan": "우리의 꿈 들어보기",
+          "btn.download-pdf": "자세히 알아보기",
           "cert.desc":
             "델라웨어주에서 정식으로 법인 설립을 완료하였으며, Certificate of Incorporation을 아래에서 다운로드할 수 있습니다.",
-          "next-steps.title": "다음 단계",
-          "next-steps.ein": "EIN (Employer Identification Number) 신청",
-          "next-steps.bank": "비즈니스 은행 계좌 개설",
-          "next-steps.investor": "투자자 및 파트너 미팅",
-          "next-steps.product": "제품 개발 시작",
+          "next-steps.title": "앞으로의 여정",
+          "next-steps.ein": "미국 사업자 번호 받기",
+          "next-steps.bank": "회사 전용 계좌 만들기",
+          "next-steps.investor": "함께할 동료들 만나기",
+          "next-steps.product": "당신을 위한 서비스 만들기",
           "section.business-plan": "사업계획서",
           "section.contact": "연락처",
           "footer.rights": "© 2025 Deepscovery Inc. All rights reserved.",
           "footer.desc": "Delaware C-Corporation | AGI for Dating Agent",
-          "business.purpose": "기업의 목적",
+          "business.purpose": "우리가 만드는 이유",
           "business.purpose.desc":
-            "Deepscovery는 인공지능 기술을 활용하여 데이팅 경험을 혁신하는 것을 목표로 합니다. 단순한 데이팅 앱이 아닌, 개인화된 AI 에이전트가 사용자의 취향과 성격을 분석하여 최적의 매칭을 제공합니다.",
-          "business.vision": "비전:",
+            "사랑을 찾는 일이 어렵고 외로우신가요? Deepscovery는 당신의 그런 마음을 잘 알아요. 그래서 우리는 따뜻한 AI 친구 Cupigent를 만들어, 당신이 진정한 사랑을 찾을 수 있도록 곁에서 응원하고 도와드리려고 해요.",
+          "business.vision": "우리의 꿈:",
           "business.vision.desc":
-            "개인화된 AI 매칭 기술로 더 의미 있는 관계 형성을 지원합니다.",
-          "business.mission": "미션:",
+            "모든 사람이 자신에게 꼭 맞는 사랑을 찾아 행복해지는 세상을 만들어요.",
+          "business.mission": "우리의 약속:",
           "business.mission.desc":
-            "첨단 AI 기술을 활용하여 전통적인 데이팅 앱의 한계를 뛰어넘는 혁신적인 서비스를 제공합니다.",
-          "business.why-now": "왜 지금 필요한가",
+            "따뜻한 마음과 최고의 기술로, 당신의 사랑 찾기를 진심으로 도와드릴게요.",
+          "business.why-now": "왜 지금 우리가 필요할까요?",
           "business.ai-advancement": "AI 기술의 발전",
           "business.ai-advancement.desc":
             "LLM과 컴퓨터 비전 기술의 급속한 발전으로 개인화된 매칭 알고리즘 구현이 가능해졌습니다.",
@@ -1302,10 +1368,10 @@
           "nav.gtm-strategy": "GTM Strategy",
           "nav.contact": "Contact",
           "company.name": "Deepscovery Inc.",
-          "company.tagline": "AI for Dating & Relationships",
+          "company.tagline": "Your Friendly Dating Companion",
           "status.incorporated":
-            "✅ Delaware Corporation Established (Jun 2, 2025)",
-          "status.developing": "🚀 Developing AGI Dating Agent",
+            "✨ Delaware Corporation Established (Jun 2, 2025)",
+          "status.developing": "💝 Creating Your AI Dating Friend",
           "card.company-info": "Company Information",
           "card.executive-info": "Executive Information",
           "card.service-vision": "Service Vision",
@@ -1322,34 +1388,34 @@
           "value.company-type": "Delaware C-Corporation",
           "value.established": "June 2, 2025",
           "value.business-field": "AI-based Dating Service",
-          "vision.title": "AGI for Dating Agent",
+          "vision.title": "Cupigent - Your Personal AI Dating Companion",
           "vision.desc1":
-            "We aim to revolutionize the dating experience using artificial intelligence technology.",
+            "No more lonely nights wondering if you'll find the one. We're here to help!",
           "vision.desc2":
-            "Not just a simple dating app, but a personalized AI agent that analyzes users' preferences and personalities to provide optimal matches.",
-          "btn.view-plan": "View Business Plan",
-          "btn.download-pdf": "Download PDF",
+            "Cupigent is your friendly AI companion who understands your heart and thoughtfully helps you find meaningful connections.",
+          "btn.view-plan": "Learn Our Story",
+          "btn.download-pdf": "Get Details",
           "cert.desc":
             "We have officially completed our incorporation in Delaware. You can download the Certificate of Incorporation below.",
-          "next-steps.title": "Next Steps",
-          "next-steps.ein": "Apply for EIN (Employer Identification Number)",
-          "next-steps.bank": "Open Business Bank Account",
-          "next-steps.investor": "Meet with Investors and Partners",
-          "next-steps.product": "Start Product Development",
+          "next-steps.title": "Our Journey Ahead",
+          "next-steps.ein": "Get Our Business ID",
+          "next-steps.bank": "Set Up Company Banking",
+          "next-steps.investor": "Meet Amazing Partners",
+          "next-steps.product": "Build Something Special for You",
           "section.business-plan": "Business Plan",
           "section.contact": "Contact",
           "footer.rights": "© 2025 Deepscovery Inc. All rights reserved.",
           "footer.desc": "Delaware C-Corporation | AGI for Dating Agent",
-          "business.purpose": "Company Purpose",
+          "business.purpose": "Why We're Here",
           "business.purpose.desc":
-            "Deepscovery aims to revolutionize the dating experience using artificial intelligence technology. Not just a simple dating app, but a personalized AI agent that analyzes users' preferences and personalities to provide optimal matches.",
-          "business.vision": "Vision:",
+            "Finding love can feel lonely and overwhelming. We get it. That's why we created Cupigent - a warm, caring AI friend who's always here to support you on your journey to find genuine connection.",
+          "business.vision": "Our Dream:",
           "business.vision.desc":
-            "Supporting meaningful relationship formation through personalized AI matching technology.",
-          "business.mission": "Mission:",
+            "A world where everyone finds their perfect match and lives happily ever after.",
+          "business.mission": "Our Promise:",
           "business.mission.desc":
-            "Providing innovative services that overcome the limitations of traditional dating apps using cutting-edge AI technology.",
-          "business.why-now": "Why Now",
+            "With warmth and cutting-edge technology, we'll genuinely help you find your special someone.",
+          "business.why-now": "Why Now is the Perfect Time",
           "business.ai-advancement": "AI Technology Advancement",
           "business.ai-advancement.desc":
             "The rapid development of LLM and computer vision technologies has made it possible to implement personalized matching algorithms.",
@@ -1385,9 +1451,9 @@
           "nav.gtm-strategy": "GTM戦略",
           "nav.contact": "お問い合わせ",
           "company.name": "Deepscovery Inc.",
-          "company.tagline": "AI for Dating & Relationships",
-          "status.incorporated": "✅ デラウェア法人設立完了 (2025.06.02)",
-          "status.developing": "🚀 AGI Dating Agent 開発中",
+          "company.tagline": "あなたの恋を応援するAIの友達",
+          "status.incorporated": "✨ デラウェア法人設立完了 (2025.06.02)",
+          "status.developing": "💝 AGI Dating Agent 準備中",
           "card.company-info": "会社情報",
           "card.executive-info": "経営陣情報",
           "card.service-vision": "サービスビジョン",
@@ -1404,34 +1470,34 @@
           "value.company-type": "デラウェアC-Corporation",
           "value.established": "2025年6月2日",
           "value.business-field": "AIベースのデートサービス",
-          "vision.title": "AGI for Dating Agent",
+          "vision.title": "Cupigent - あなただけのAIデート仲間",
           "vision.desc1":
-            "人工知能技術を活用してデート体験を革新することを目指しています。",
+            "もう一人で悩まないで。私たちがあなたの素敵な出会いを見つけるお手伝いをします。",
           "vision.desc2":
-            "単純なデートアプリではなく、パーソナライズされたAIエージェントがユーザーの好みや性格を分析して最適なマッチングを提供します。",
-          "btn.view-plan": "事業計画書を見る",
-          "btn.download-pdf": "PDFダウンロード",
+            "Cupigentは、あなたの心を理解し、本当の愛を見つけられるよう心を込めてサポートする優しいAIの友達です。",
+          "btn.view-plan": "私たちの夢を聞く",
+          "btn.download-pdf": "詳しく見る",
           "cert.desc":
             "デラウェア州で正式に法人設立を完了しました。以下からCertificate of Incorporationをダウンロードできます。",
-          "next-steps.title": "次のステップ",
-          "next-steps.ein": "EIN (Employer Identification Number) 申請",
-          "next-steps.bank": "ビジネス銀行口座開設",
-          "next-steps.investor": "投資家・パートナーミーティング",
-          "next-steps.product": "製品開発開始",
+          "next-steps.title": "これからの旅",
+          "next-steps.ein": "アメリカ事業者番号取得",
+          "next-steps.bank": "会社専用口座開設",
+          "next-steps.investor": "素敵な仲間との出会い",
+          "next-steps.product": "あなたのためのサービス作り",
           "section.business-plan": "事業計画書",
           "section.contact": "お問い合わせ",
           "footer.rights": "© 2025 Deepscovery Inc. All rights reserved.",
           "footer.desc": "Delaware C-Corporation | AGI for Dating Agent",
-          "business.purpose": "企業の目的",
+          "business.purpose": "私たちがここにいる理由",
           "business.purpose.desc":
-            "Deepscoveryは、人工知能技術を活用してデート体験を革新することを目指しています。単純なデートアプリではなく、パーソナライズされたAIエージェントがユーザーの好みや性格を分析して最適なマッチングを提供します。",
-          "business.vision": "ビジョン：",
+            "恋愛って難しいですよね。一人でいると寂しいし、不安になることも。私たちはそんなあなたの気持ちがよく分かります。だからCupigentという優しいAIの友達を作って、あなたが本当の愛を見つけられるよう、いつも応援しています。",
+          "business.vision": "私たちの夢：",
           "business.vision.desc":
-            "パーソナライズされたAIマッチング技術でより意味のある関係形成を支援します。",
-          "business.mission": "ミッション：",
+            "みんなが自分にぴったりの人を見つけて、幸せになれる世界。",
+          "business.mission": "私たちの約束：",
           "business.mission.desc":
-            "最先端のAI技術を活用して従来のデートアプリの限界を超える革新的なサービスを提供します。",
-          "business.why-now": "なぜ今必要なのか",
+            "温かい心と最新の技術で、あなたの特別な人探しを本気でお手伝いします。",
+          "business.why-now": "なぜ今が絶好のタイミングなのか",
           "business.ai-advancement": "AI技術の発展",
           "business.ai-advancement.desc":
             "LLMとコンピュータビジョン技術の急速な発展により、パーソナライズされたマッチングアルゴリズムの実装が可能になりました。",
