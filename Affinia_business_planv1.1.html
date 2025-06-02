@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Affinia 사업계획서</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      .slide-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      .slide {
+        padding: 30px 20px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #eaeaea;
+        page-break-inside: avoid;
+      }
+      .slide:last-child {
+        border-bottom: none;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a365d;
+        margin-bottom: 1rem;
+      }
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #2c5282;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #3182ce;
+        margin-bottom: 0.75rem;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #3182ce 0%, #805ad5 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .feature-card {
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+      .timeline-item {
+        padding-left: 30px;
+        border-left: 2px solid #3182ce;
+        margin-left: 20px;
+        padding-bottom: 20px;
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -11px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #3182ce;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #3182ce 0%, #805ad5 100%);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Title Slide -->
+      <div class="slide text-center py-16">
+        <h1 class="text-5xl font-bold mb-6 gradient-text">Affinia</h1>
+        <p class="text-2xl text-gray-600 mb-8">AGI for Dating Agent</p>
+        <div
+          class="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8"
+        ></div>
+        <p class="text-xl text-gray-500">사업계획서</p>
+      </div>
+
+      <!-- Company Purpose Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-bullseye mr-2"></i> 기업의 목적
+        </h2>
+        <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+          <h3 class="text-2xl font-semibold mb-4">AGI for Dating Agent</h3>
+          <p class="text-lg">
+            Affinia는 인공지능 기술을 활용하여 데이팅 경험을 혁신하는 것을
+            목표로 합니다. 단순한 데이팅 앱이 아닌, 개인화된 AI 에이전트가
+            사용자의 취향과 성격을 분석하여 최적의 매칭을 제공합니다.
+          </p>
+          <div class="mt-6">
+            <p class="text-lg">
+              <strong>비전:</strong> 개인화된 AI 매칭 기술로 더 의미 있는 관계
+              형성을 지원합니다.
+            </p>
+            <p class="text-lg mt-2">
+              <strong>미션:</strong> 첨단 AI 기술을 활용하여 전통적인 데이팅
+              앱의 한계를 뛰어넘는 혁신적인 서비스를 제공합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Now Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-clock mr-2"></i> 왜 지금 필요한가
+        </h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-5 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">AI 기술의 발전</h3>
+            <p>
+              LLM과 컴퓨터 비전 기술의 급속한 발전으로 개인화된 매칭 알고리즘
+              구현이 가능해졌습니다.
+            </p>
+          </div>
+          <div class="p-5 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">사용자 경험의 한계</h3>
+            <p>
+              기존 데이팅 앱의 Swipe 기반 UI는 표면적인 정보에만 의존하여 의미
+              있는 매칭에 한계가 있습니다.
+            </p>
+          </div>
+          <div class="p-5 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">디지털 관계의 증가</h3>
+            <p>
+              팬데믹 이후 온라인 관계 형성에 대한 수요가 증가하였으며, 더 정교한
+              매칭 시스템이 필요합니다.
+            </p>
+          </div>
+          <div class="p-5 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">개인화 요구 증가</h3>
+            <p>
+              사용자들은 자신의 취향과 가치관에 맞는 더 개인화된 매칭 서비스를
+              원하고 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Market Size Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-chart-pie mr-2"></i> 시장 규모
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-2xl font-semibold mb-3">한국 시장</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>온라인 데이팅 시장 규모: 2023년 기준 약 7,000억원</li>
+              <li>연간 성장률: 15% 이상</li>
+              <li>주 이용자: 20-30대 싱글 (약 800만명)</li>
+              <li>모바일 앱 사용률: 전체 사용자의 85%</li>
+            </ul>
+          </div>
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-2xl font-semibold mb-3">글로벌 시장</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>온라인 데이팅 시장 규모: 2023년 기준 약 80억 달러</li>
+              <li>예상 성장률: 2028년까지 연 10% 성장 예상</li>
+              <li>AI 데이팅 서비스 시장: 급성장 중 (연 25% 이상)</li>
+              <li>주요 시장: 북미, 유럽, 동아시아</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 p-6 bg-indigo-50 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3">시장 트렌드</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 bg-white rounded shadow-sm">
+              <p class="font-medium">AI 기반 매칭 기술 수요 증가</p>
+            </div>
+            <div class="p-4 bg-white rounded shadow-sm">
+              <p class="font-medium">개인 데이터 기반 맞춤형 서비스 확대</p>
+            </div>
+            <div class="p-4 bg-white rounded shadow-sm">
+              <p class="font-medium">사용자 경험 중심의 UX/UI 혁신</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Competitive Advantages Slide -->
+      <div class="slide">
+        <h2 class="gradient-text"><i class="fas fa-trophy mr-2"></i> 경쟁력</h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="feature-card bg-blue-50">
+            <h3 class="text-xl font-semibold mb-2">첨단 AI 기술</h3>
+            <p>LLM과 컴퓨터 비전 기술을 활용한 개인화 알고리즘</p>
+          </div>
+          <div class="feature-card bg-blue-50">
+            <h3 class="text-xl font-semibold mb-2">다층적 분석</h3>
+            <p>
+              외모, 성격, SNS 활동 등 다양한 데이터 포인트를 통합 분석하는 기술
+            </p>
+          </div>
+          <div class="feature-card bg-blue-50">
+            <h3 class="text-xl font-semibold mb-2">에이전트 기반 접근</h3>
+            <p>
+              단순 매칭이 아닌, 개인화된 AI 비서가 관계 형성을 지원하는 새로운
+              패러다임
+            </p>
+          </div>
+          <div class="feature-card bg-blue-50">
+            <h3 class="text-xl font-semibold mb-2">관계 예측 모델</h3>
+            <p>관계 지속 기간과 상호 만족도를 예측하는 알고리즘</p>
+          </div>
+        </div>
+        <div class="mt-8 p-6 bg-indigo-50 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3">경쟁사 대비 차별점</h3>
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-indigo-100">
+                <th class="border p-2 text-left">기능</th>
+                <th class="border p-2 text-center">Affinia</th>
+                <th class="border p-2 text-center">Tinder</th>
+                <th class="border p-2 text-center">Glam</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border p-2">AI 에이전트 접근법</td>
+                <td class="border p-2 text-center text-green-600">✓</td>
+                <td class="border p-2 text-center text-red-600">✗</td>
+                <td class="border p-2 text-center text-red-600">✗</td>
+              </tr>
+              <tr>
+                <td class="border p-2">심층적 성격 분석</td>
+                <td class="border p-2 text-center text-green-600">✓</td>
+                <td class="border p-2 text-center text-red-600">✗</td>
+                <td class="border p-2 text-center text-red-600">✗</td>
+              </tr>
+              <tr>
+                <td class="border p-2">관계 지속성 예측</td>
+                <td class="border p-2 text-center text-green-600">✓</td>
+                <td class="border p-2 text-center text-red-600">✗</td>
+                <td class="border p-2 text-center text-red-600">✗</td>
+              </tr>
+              <tr>
+                <td class="border p-2">SNS 데이터 통합 분석</td>
+                <td class="border p-2 text-center text-green-600">✓</td>
+                <td class="border p-2 text-center text-red-600">✗</td>
+                <td class="border p-2 text-center text-yellow-600">부분적</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Product Roadmap Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-road mr-2"></i> 제품 개발 로드맵
+        </h2>
+        <div class="mt-6">
+          <div class="timeline-item pb-8">
+            <h3 class="text-xl font-semibold">Phase 0: 기반 기술 구축</h3>
+            <p class="mt-2">
+              Azure AI 클라우드 상에서 Langraph와 Prompt Engineering 기법을
+              활용하여 자체 모델 개발 없이 LLM과 고객 데이터베이스를 유기적으로
+              통합해 데모 버전을 신속하게 구축합니다.
+            </p>
+            <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+              <p>
+                <strong>핵심 기술:</strong> Langraph, Prompt Engineering, Azure
+                AI Cloud
+              </p>
+              <p><strong>개발 기간:</strong> 2개월</p>
+            </div>
+          </div>
+
+          <div class="timeline-item pb-8">
+            <h3 class="text-xl font-semibold">Phase 1: Beauty Score 측정</h3>
+            <p class="mt-2">
+              컴퓨터 비전 기술을 활용하여 사용자의 얼굴 특징을 분석하고 객관적인
+              미적 점수를 산출합니다. 이 과정에서 사용자 선호도와 문화적 맥락을
+              고려한 다차원적 분석이 이루어집니다.
+            </p>
+            <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+              <p>
+                <strong>핵심 기술:</strong> 딥러닝 기반 얼굴 인식, 특징 추출
+                알고리즘
+              </p>
+              <p><strong>개발 기간:</strong> 3개월</p>
+            </div>
+          </div>
+
+          <div class="timeline-item pb-8">
+            <h3 class="text-xl font-semibold">
+              Phase 2: Facial Features Classification
+            </h3>
+            <p class="mt-2">
+              사용자의 얼굴 특징을 세부적으로 분류하고 선호도와 매칭하는
+              시스템을 개발합니다. 이를 통해 외모 기반의 초기 매칭 정확도를
+              향상시킵니다.
+            </p>
+            <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+              <p>
+                <strong>핵심 기술:</strong> 얼굴 구조 분석, 선호도 매핑 알고리즘
+              </p>
+              <p><strong>개발 기간:</strong> 4개월</p>
+            </div>
+          </div>
+
+          <div class="timeline-item pb-8">
+            <h3 class="text-xl font-semibold">
+              Phase 3: SNS Image에서 성격 특성 추출
+            </h3>
+            <p class="mt-2">
+              사용자의 SNS 이미지를 분석하여 성격, 취미, 라이프스타일 등의
+              특성을 추출합니다. 이 데이터는 더 깊은 수준의 매칭에 활용됩니다.
+            </p>
+            <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+              <p>
+                <strong>핵심 기술:</strong> 이미지 컨텍스트 분석, 성격 추론
+                알고리즘, LLM 통합
+              </p>
+              <p><strong>개발 기간:</strong> 5개월</p>
+              <p class="mt-2">
+                <strong>중요성:</strong> SNS 이미지는 사용자의 실제 생활과
+                취향을 반영하므로, ColdStart 문제 해결에 효과적입니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item pb-8">
+            <h3 class="text-xl font-semibold">
+              Phase 4: 관계 지속성 및 만족도 예측
+            </h3>
+            <p class="mt-2">
+              축적된 데이터를 기반으로 잠재적 커플의 관계 지속 기간과 상호
+              만족도를 예측하는 모델을 개발합니다. 이를 통해 의미 있고 지속
+              가능한 관계 형성을 촉진합니다.
+            </p>
+            <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+              <p>
+                <strong>핵심 기술:</strong> 관계 역학 모델링, 예측 알고리즘,
+                피드백 시스템
+              </p>
+              <p><strong>개발 기간:</strong> 6개월</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <h3 class="text-xl font-semibold">
+              Phase 5: 자기복제 Agent와 가상 대화
+            </h3>
+            <p class="mt-2">
+              사용자의 대화데이터를 분석해 자기복제 Agent를 생성합니다. 이
+              Agent들은 서로 자동으로 대화하며 상호만족도를를 평가하고 이로써
+              사용자의 시간을 절약하고 매칭 정확도를 크게 높일 수 있습니다.
+            </p>
+            <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+              <p>
+                <strong>핵심 기술:</strong> 대화데이터 기반 에이전트 생성, 멀티
+                에이전트 상호작용
+              </p>
+              <!-- <p><strong>개발 기간:</strong> 6개월</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI/UX Paradigm Shift Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-sync-alt mr-2"></i> UI/UX에서 Swipe 다음 패러다임이
+          LLM인 이유
+        </h2>
+        <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3">
+            인간-컴퓨터 상호작용(HCI)의 진화
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="p-4 bg-white rounded shadow-sm">
+              <p class="font-medium">
+                2000~2010: 그래픽 기반 인터페이스 (마우스/클릭)
+              </p>
+            </div>
+            <div class="p-4 bg-white rounded shadow-sm">
+              <p class="font-medium">
+                2010년대: 터치 인터페이스 (스와이프/핀치)
+              </p>
+            </div>
+            <div class="p-4 bg-white rounded shadow-sm">
+              <p class="font-medium">
+                2020년대: 대화형 인터페이스 (자연어 처리)
+              </p>
+            </div>
+          </div>
+
+          <p class="mb-4">
+            ChatGPT의 성공은 사용자 인터페이스의 근본적인 변화를 보여줍니다.
+            복잡한 메뉴, 버튼, 스와이프 대신 '대화'를 통해 의도를 전달하는
+            방식이 주목받고 있습니다. 이는 인간의 자연스러운 소통 방식에 더
+            가깝습니다. 생각, 감정, 필요를 언어로 표현하는 과정에서 더 깊은
+            수준의 상호작용이 가능해집니다.
+          </p>
+
+          <p>
+            GPT와 같은 대규모 언어 모델은 사용자의 복잡한 요구사항을 이해하고
+            맥락에 맞는 응답을 제공할 수 있습니다. '나와 잘 맞는 사람을
+            찾아줘'와 같은 요청에 대해 다차원적인 분석이 가능해집니다. "취미가
+            같은 사람" "성격이 비슷한 사람" 등의 미묘한 뉘앙스까지 포착할 수
+            있습니다.
+          </p>
+
+          <div class="mt-6 p-4 bg-indigo-100 rounded">
+            <p class="font-medium">
+              Affinia의 접근: 기존 스와이프 UI의 한계를 넘어, LLM 기반의 대화형
+              에이전트를 통해 사용자의 깊은 수준의 선호도와 필요를 파악하고
+              최적의 매칭을 제공합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Competitive Analysis Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-balance-scale mr-2"></i> Tinder/Glam은 왜 추천 고도화
+          서비스라고 볼 수 없는가?
+        </h2>
+        <div class="mt-6 grid grid-cols-1 gap-6">
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">알고리즘의 한계</h3>
+            <p>
+              Agi 수준의 Dating Agent에 도달하려면 아래 데이터를
+              정답(Label/Reward Signal)으로 학습하는 강화학습 구조가
+              필수적입니다. 하지만 Tinder/Glam의 UI는 사용자가 앱 이탈 후 실제
+              결과 데이터와 고품질 피드백을 수집하기 어려워 추천 정밀도 향상이
+              구조적으로 제한됩니다. 반면 저희 서비스는 대화형 UX로 이러한
+              데이터를 자연스럽게 수집하여 지속적인 개선이 가능합니다.
+            </p>
+            <ol class="list-decimal pl-6 mt-3 space-y-2">
+              <li>
+                실제 만남 이후, 양 당사자가 서로에 대해 평가한 만족도 점수의 합
+                (0~100점 기준)
+              </li>
+              <li>실제로 관계가 형성되었을 경우, 해당 관계가 유지된 기간</li>
+            </ol>
+          </div>
+
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">UI/UX의 한계</h3>
+            <p>
+              기존 서비스들은 수동적인 스와이프 인터페이스에 의존하여, 사용자의
+              복잡한 필요와 선호를 표현하는 데 한계가 있습니다. 이는 사용자
+              경험의 깊이를 제한하고, 매칭의 질적 향상을 저해합니다.
+            </p>
+          </div>
+
+          <div class="p-6 bg-indigo-100 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Affinia의 차별점</h3>
+            <p>
+              Affinia는 단순한 매칭 앱이 아닌, 사용자의 복잡한 선호도와 성격을
+              이해하는 AGI 기반 에이전트/비서로 포지셔닝합니다. 이를 통해 기존
+              데이팅 앱의 한계를 근본적으로 극복합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GTM Strategy Slide -->
+      <!-- <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-rocket mr-2"></i> GTM (Go-to-Market) 전략
+        </h2>
+      </div> -->
+
+      <!-- Business Model Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-money-bill-wave mr-2"></i> 사업 모델
+        </h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">수익 모델</h3>
+            <div class="space-y-4">
+              <div class="p-3 bg-white rounded shadow-sm">
+                <h4 class="font-medium text-lg">프리미엄 구독</h4>
+                <p>월 구독 모델로, 고급 AI 매칭 및 관계 분석 기능 제공</p>
+              </div>
+              <div class="p-3 bg-white rounded shadow-sm">
+                <h4 class="font-medium text-lg">인앱 구매</h4>
+                <p>고급 분석 리포트, 우선 매칭 등 추가 기능</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">성장 전략</h3>
+            <div class="space-y-4">
+              <div class="p-3 bg-white rounded shadow-sm">
+                <h4 class="font-medium text-lg">프리미엄화 전략</h4>
+                <p>
+                  기본 기능은 무료로 제공하고, 고급 AI 기능은 구독 모델로 전환
+                </p>
+              </div>
+              <div class="p-3 bg-white rounded shadow-sm">
+                <h4 class="font-medium text-lg">데이터 기반 확장</h4>
+                <p>
+                  수집된 데이터를 활용한 관계 심리학 연구 및 신규 서비스 개발
+                </p>
+              </div>
+              <div class="p-3 bg-white rounded shadow-sm">
+                <h4 class="font-medium text-lg">글로벌 확장</h4>
+                <p>아시아, 북미, 유럽 순차적 진출 전략</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 p-6 bg-indigo-100 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3">핵심 지표</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="p-3 bg-white rounded shadow-sm text-center">
+              <h4 class="font-medium">MAU</h4>
+            </div>
+            <div class="p-3 bg-white rounded shadow-sm text-center">
+              <h4 class="font-medium">전환율</h4>
+            </div>
+            <div class="p-3 bg-white rounded shadow-sm text-center">
+              <h4 class="font-medium">유저 유지율</h4>
+            </div>
+            <div class="p-3 bg-white rounded shadow-sm text-center">
+              <h4 class="font-medium">매칭 성공률</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vision Statement Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-lightbulb mr-2"></i> 핵심 비전
+        </h2>
+        <div class="mt-8">
+          <div
+            class="p-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-center">
+              "데이팅 앱이 아닌 Agent/비서로 인식되어야 한다"
+            </h3>
+            <p class="text-lg text-center">
+              Affinia의 핵심 가치는 "친근함"입니다. 단순한 매칭 앱이 아닌,
+              사용자의 관계를 이해하고 도와주는 AI 비서로서 포지셔닝합니다.
+            </p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-blue-50 rounded-lg">
+              <h3 class="text-xl font-semibold mb-3">새로운 게임체인저</h3>
+              <p>
+                저희는 단순히 트렌드를 따르는 것이 아닌, 새로운 패러다임을
+                창조하려 합니다. 데이팅 경험의 근본적인 혁신을 통해 글로벌
+                시장을 선도할 것입니다.
+              </p>
+              <p class="mt-4">
+                SNS와 디지털 플랫폼에 익숙한 20대 타겟층의 공감을 얻는 서비스를
+                만들어, 빠르게 확장하는 전략을 구사할 것입니다.
+              </p>
+            </div>
+
+            <div class="p-6 bg-blue-50 rounded-lg">
+              <h3 class="text-xl font-semibold mb-3">데이터 통합 전략</h3>
+              <p>
+                그간 모은 모든 데이터를 Affinia에 통합시켜, 더욱 정교한 매칭과
+                분석을 제공합니다. 데이터는 저희의 핵심 자산이며, 지속적인
+                서비스 개선의 원동력입니다.
+              </p>
+              <p class="mt-4">
+                미국 델라웨어 C.Corp을 본사로 하여 글로벌 비즈니스와 투자 유치에
+                최적화된 구조를 갖추고 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Members Slide -->
+      <div class="slide">
+        <h2 class="gradient-text"><i class="fas fa-users mr-2"></i> 팀 멤버</h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-blue-50 rounded-lg flex flex-col items-center">
+            <div
+              class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center"
+            >
+              <i class="fas fa-user text-4xl text-gray-500"></i>
+            </div>
+            <h3 class="text-xl font-semibold">이태헌</h3>
+            <p class="text-blue-600 mb-2">CEO & Founder</p>
+            <p class="text-center">AI 연구 및 창업 경험, 데이팅 도메인 3년차</p>
+          </div>
+          <!-- 
+          <div class="p-6 bg-blue-50 rounded-lg flex flex-col items-center">
+            <div
+              class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center"
+            >
+              <i class="fas fa-user text-4xl text-gray-500"></i>
+            </div>
+            <h3 class="text-xl font-semibold">이서연</h3>
+            <p class="text-blue-600 mb-2">CTO</p>
+            <p class="text-center">AI/ML 전문가, 카이스트 컴퓨터과학 박사</p>
+          </div>
+
+          <div class="p-6 bg-blue-50 rounded-lg flex flex-col items-center">
+            <div
+              class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center"
+            >
+              <i class="fas fa-user text-4xl text-gray-500"></i>
+            </div>
+            <h3 class="text-xl font-semibold">박지우</h3>
+            <p class="text-blue-600 mb-2">Head of Product</p>
+            <p class="text-center">전 네이버 UX 디자이너, 서울대 심리학</p>
+          </div> -->
+        </div>
+
+        <!-- <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-blue-50 rounded-lg flex flex-col items-center">
+            <div
+              class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center"
+            >
+              <i class="fas fa-user text-4xl text-gray-500"></i>
+            </div>
+            <h3 class="text-xl font-semibold">최준호</h3>
+            <p class="text-blue-600 mb-2">AI Research Lead</p>
+            <p class="text-center">컴퓨터 비전 전문가, 전 구글 엔지니어</p>
+          </div>
+
+          <div class="p-6 bg-blue-50 rounded-lg flex flex-col items-center">
+            <div
+              class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center"
+            >
+              <i class="fas fa-user text-4xl text-gray-500"></i>
+            </div>
+            <h3 class="text-xl font-semibold">정다은</h3>
+            <p class="text-blue-600 mb-2">Marketing Director</p>
+            <p class="text-center">전 테크 스타트업 CMO, 연세대 경영학</p>
+          </div>
+
+          <div class="p-6 bg-blue-50 rounded-lg flex flex-col items-center">
+            <div
+              class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center"
+            >
+              <i class="fas fa-user text-4xl text-gray-500"></i>
+            </div>
+            <h3 class="text-xl font-semibold">한상우</h3>
+            <p class="text-blue-600 mb-2">Backend Lead</p>
+            <p class="text-center">클라우드 아키텍처 전문가, AWS 인증</p>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-indigo-100 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3 text-center">자문단</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+            <div class="p-3">
+              <p class="font-medium">김교수 (서울대 심리학과)</p>
+            </div>
+            <div class="p-3">
+              <p class="font-medium">박 박사 (AI 연구소장)</p>
+            </div>
+            <div class="p-3">
+              <p class="font-medium">최 대표 (연애심리 전문가)</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Financials Slide -->
+      <!-- <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-chart-line mr-2"></i> 재무
+        </h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">투자 현황</h3>
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="bg-blue-100">
+                  <th class="border p-2 text-left">라운드</th>
+                  <th class="border p-2 text-left">금액</th>
+                  <th class="border p-2 text-left">투자자</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border p-2">시드</td>
+                  <td class="border p-2">5억원</td>
+                  <td class="border p-2">엔젤 투자자, 초기 VC</td>
+                </tr>
+                <tr>
+                  <td class="border p-2">시리즈 A (목표)</td>
+                  <td class="border p-2">30억원</td>
+                  <td class="border p-2">AI 특화 VC, 글로벌 펀드</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">지출 계획</h3>
+            <div class="relative h-60">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="w-48 h-48 rounded-full bg-blue-100 flex items-center justify-center"
+                >
+                  <div class="text-center">
+                    <p class="text-sm text-gray-500">지출 계획 차트</p>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute top-0 right-0 space-y-2">
+                <div class="flex items-center">
+                  <div class="w-4 h-4 bg-blue-500 mr-2"></div>
+                  <p>R&D (60%)</p>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-4 h-4 bg-green-500 mr-2"></div>
+                  <p>마케팅 (20%)</p>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-4 h-4 bg-yellow-500 mr-2"></div>
+                  <p>운영 (15%)</p>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-4 h-4 bg-red-500 mr-2"></div>
+                  <p>기타 (5%)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3">재무 전망</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="bg-blue-100">
+                  <th class="border p-2">연도</th>
+                  <th class="border p-2">매출</th>
+                  <th class="border p-2">사용자 수</th>
+                  <th class="border p-2">전환율</th>
+                  <th class="border p-2">운영 비용</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border p-2">1년차</td>
+                  <td class="border p-2">3억원</td>
+                  <td class="border p-2">5만명</td>
+                  <td class="border p-2">2%</td>
+                  <td class="border p-2">15억원</td>
+                </tr>
+                <tr>
+                  <td class="border p-2">2년차</td>
+                  <td class="border p-2">25억원</td>
+                  <td class="border p-2">20만명</td>
+                  <td class="border p-2">5%</td>
+                  <td class="border p-2">30억원</td>
+                </tr>
+                <tr>
+                  <td class="border p-2">3년차</td>
+                  <td class="border p-2">100억원</td>
+                  <td class="border p-2">50만명</td>
+                  <td class="border p-2">8%</td>
+                  <td class="border p-2">60억원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Timeline Slide -->
+      <div class="slide">
+        <h2 class="gradient-text">
+          <i class="fas fa-calendar-alt mr-2"></i> 전체 일정
+        </h2>
+        <div class="mt-8">
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <div class="relative">
+              <!-- Timeline -->
+              <div class="absolute left-8 top-0 bottom-0 w-1 bg-blue-400"></div>
+
+              <!-- Timeline items -->
+              <div class="relative z-10 mb-12 flex">
+                <div
+                  class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4"
+                >
+                  Q1
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm flex-grow">
+                  <h3 class="text-lg font-semibold">Phase 1: 개발 시작</h3>
+                  <ul class="list-disc pl-5 mt-2">
+                    <li>핵심 팀 구성</li>
+                    <li>초기 프로토타입 개발</li>
+                    <li>Beauty Score 측정 알고리즘 개발</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative z-10 mb-12 flex">
+                <div
+                  class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4"
+                >
+                  Q2
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm flex-grow">
+                  <h3 class="text-lg font-semibold">Phase 2: 베타 출시</h3>
+                  <ul class="list-disc pl-5 mt-2">
+                    <li>얼굴 특징 분류 시스템 완성</li>
+                    <li>제한된 사용자 대상 베타 테스트</li>
+                    <li>투자 유치 (시리즈 A)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative z-10 mb-12 flex">
+                <div
+                  class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4"
+                >
+                  Q3
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm flex-grow">
+                  <h3 class="text-lg font-semibold">Phase 3: 기능 확장</h3>
+                  <ul class="list-disc pl-5 mt-2">
+                    <li>SNS 이미지 성격 특성 추출 기능 추가</li>
+                    <li>AI 에이전트 기능 고도화</li>
+                    <li>한국 시장 정식 출시</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative z-10 mb-12 flex">
+                <div
+                  class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4"
+                >
+                  Q4
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm flex-grow">
+                  <h3 class="text-lg font-semibold">Phase 4: 확장 단계</h3>
+                  <ul class="list-disc pl-5 mt-2">
+                    <li>관계 지속성 및 만족도 예측 모델 도입</li>
+                    <li>아시아 주요 시장 확장</li>
+                    <li>B2B API 서비스 출시</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative z-10 flex">
+                <div
+                  class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4"
+                >
+                  Y2
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm flex-grow">
+                  <h3 class="text-lg font-semibold">글로벌 확장</h3>
+                  <ul class="list-disc pl-5 mt-2">
+                    <li>북미 및 유럽 시장 진출</li>
+                    <li>시리즈 B 투자 유치</li>
+                    <li>AI 기술 고도화 및 특허 출원</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact & Closing Slide -->
+      <div class="slide text-center py-16">
+        <h2 class="text-3xl font-bold mb-6 gradient-text">Affinia</h2>
+        <p class="text-2xl text-gray-600 mb-8">
+          누구나 3분안에 이상형을 찾을 수 있는 세상을 만들고 싶습니다
+        </p>
+        <div
+          class="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8"
+        ></div>
+        <p class="text-xl mb-2">연락처: affinia.ai@gmail.com</p>
+        <p class="text-xl mb-2">웹사이트: www.Affinia.ai</p>
+        <p class="text-gray-500 mt-8">
+          © 2025 Affinia Inc. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
